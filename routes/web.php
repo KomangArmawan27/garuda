@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// auth
+Route::get('/login', function () {
+    return view('auth/login');
+});
+
+// dashboard
+Route::get('/sales', function () {
+    return view('dashboard/sales');
+});
+Route::get('/admin', function () {
+    return view('dashboard/admin');
+});
+
+// Route::view('login','auth/login');
