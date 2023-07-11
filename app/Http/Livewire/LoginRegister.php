@@ -30,12 +30,6 @@ class LoginRegister extends Component
             'password' => 'required',
         ]);
 
-        // if (\Auth::attempt(array('email' => $this->email, 'password' => $this->password))) {
-        //     session()->flash('message', "Berhasil Login.");
-        //     return redirect()->to('/');
-        // } else {
-        //     session()->flash('error', 'Email dan Password salah.');
-        // }
 
         if (\Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             session()->flash('message', 'Berhasil Login.');

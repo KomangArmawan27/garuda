@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Halaman Admin</title>
+    <title>Halaman Admin - Tambah paket</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
 </head>
@@ -16,7 +16,12 @@
     <div class="flex flex-row h-screen bg-white">
         <!-- sidebar -->
         @include('components/side')
+
+        <!-- content -->
+        <livewire:form-paket />
+        
     </div>
+    @livewireScripts
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +31,21 @@ Route::get('/admin', function () {
     return view('dashboard/admin');
 });
 
+// comp
+// Route::get('/paket', function () {
+//     return view('components/paket');
+// });
+Route::get('/export', function () {
+    return view('components/export');
+});
+Route::get('/users', function () {
+    return view('components/users');
+});
+
+// form
+Route::get('/formPaket', function () {
+    return view('form/formPaket');
+});
+
+Route::get('/paket', [PaketController::class, 'index']);
 // Route::view('login','auth/login');
